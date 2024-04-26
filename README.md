@@ -45,10 +45,4 @@ Here are some screenshots illustrating the application:
 - **Air Quality Data**: The fourth image shows a line chart with air quality data for the selected state.
 ![Air Quality Data](images/air.png).
 
-## Contributing
 
-Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull request with your changes.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
