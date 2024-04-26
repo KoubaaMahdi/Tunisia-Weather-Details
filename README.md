@@ -34,16 +34,16 @@ git clone https://github.com/KoubaaMahdi/Tunisia-Weather-Details.git
 Here are some screenshots illustrating the application:
 
 - **Map and Weather Chart**: The first image shows the interactive map with markers indicating the states of Tunisia. It also shows a weather chart displaying weather data over time.
-![Map and Weather Chart](image1.png)
+![Map and Weather Chart](images/map.png).
 
 - **Bar Chart of Average Temperatures**: The second image displays a bar chart representing the average temperatures of each state.
-![Bar Chart](image2.png)
+![Bar Chart](images/bar.png).
 
 - **Weather Summary**: The third image shows a summary of weather statistics, including the hottest and coldest states, average temperature, temperature range, and times of hottest and coldest temperatures.
-![Weather Summary](image3.png)
+![Weather Summary](images/summary.png).
 
 - **Air Quality Data**: The fourth image shows a line chart with air quality data for the selected state.
-![Air Quality Data](image4.png)
+![Air Quality Data](images/air.png).
 
 ## Contributing
 
