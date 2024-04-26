@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tunisia Weather Dashboard</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="test.js"></script>
+</head>
+
+<body class="bg-gray-300 overflow-x-hidden"> <!-- Softer background color -->
+    <div class="container mx-auto p-6"> <!-- Centered content with padding -->
+        <header class="mb-4 text-center"> <!-- Header with weather dashboard title -->
+            <h1 class="text-2xl font-bold text-gray-800">Tunisia Weather And Air Qualtiy Dashboard</h1>
+        </header>
+        
+        <div class="flex flex-col space-y-4 bg-white p-6 rounded-lg shadow-lg"> <!-- Main container with shadow -->
+            <center><div> <strong>Weather Details </strong></div></center>
+            <div class="flex justify-between"> <!-- Flex container for map and chart -->
+                <div id="map" class="w-1/2 h-96 rounded-lg shadow-md"></div> <!-- Map with rounded corners -->
+                <div class="w-1/2 pl-4"> <!-- Adjusted proportions for better alignment -->
+                    <div id="chart" class="h-96 bg-gray-200 rounded-lg shadow-md"></div>
+                    <div class="mt-4"> <!-- Control section with label and button -->
+                        <label for="date-picker" class="block text-gray-600">Select a Date:</label>
+                        <input type="date" id="date-picker" value="2000-01-01"
+                            class="border border-gray-300 rounded p-2" /> <!-- Date picker -->
+                        <button id="refresh" class="mt-2 bg-blue-500 text-white rounded p-2 hover:bg-blue-600">Refresh
+                            Chart</button> <!-- Refresh button with hover effect -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex space-x-4"> <!-- Container for bar graph and additional data -->
+                <div id="bar-graph" style="width: 800px; height: 400px;" class="bg-gray-200 rounded-lg shadow-md"></div>
+                <!-- Bar graph -->
+                <div class="w-1/3 bg-white p-4 rounded-lg shadow-md"> <!-- Section for additional data -->
+                    <h2 class="text-xl font-bold text-gray-800">Weather Summary</h2> <!-- Section header -->
+                
+                    <div class="stats mt-2"> <!-- Container for the weather summary information -->
+                        <p class="text-gray-700"><strong>Hottest State:</strong> <span id="hottest-state">-</span> 
+                            (<span id="hottest-temp">-</span> °C)</p> <!-- Placeholder for hottest state and temperature -->
+                        <p class="text-gray-700"><strong>Coldest State:</strong> <span id="coldest-state">-</span> 
+                            (<span id="coldest-temp">-</span> °C)</p> <!-- Placeholder for coldest state and temperature -->
+                        <p class="text-gray-700"><strong>Average Temperature:</strong> <span id="avg-temperature">-</span> °C</p> <!-- Placeholder for average temperature -->
+                
+                        <p class="text-gray-700"><strong>Temperature Range:</strong> <span id="temp-range">-</span> °C</p> <!-- Placeholder for temperature range -->
+                        <p class="text-gray-700"><strong>Time of Hottest Temp:</strong> <span id="hottest-time">-</span></p> <!-- Placeholder for time of hottest temperature -->
+                        <p class="text-gray-700"><strong>Time of Coldest Temp:</strong> <span id="coldest-time">-</span></p> <!-- Placeholder for time of coldest temperature -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="flex flex-col space-y-4 bg-white p-6 rounded-lg shadow-lg mt-8"> <!-- Main container with shadow -->
+            <center><div> <strong>Air Details </strong></div></center>
+            <div class="mt-6 bg-white p-6 rounded-lg shadow-lg" > <!-- New section for air quality data -->
+                <h2 class="text-2xl font-bold text-gray-800">Air Quality Data</h2> <!-- Title for new section -->
+                <div class="mt-4"> <!-- Dropdown for selecting a state -->
+                    <label for="state-selector" class="block text-gray-600">Select a State:</label>
+                    <select id="state-selector" class="border border-gray-300 rounded p-2" value="tunis">
+                        <!-- Placeholder options; will be populated by JavaScript -->
+                    </select>
+                    <button id="load-air-quality" class="mt-2 bg-blue-500 text-white rounded p-2 hover:bg-blue-600">Load Air Quality</button>
+                </div>
+                <div id="air-quality-chart" class="mt-6 bg-gray-200 rounded-lg shadow-md" > <!-- Container for air quality chart -->
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+
+</html>
